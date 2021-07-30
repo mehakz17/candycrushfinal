@@ -1,0 +1,18 @@
+html,
+body {
+    background: url("../images/candybg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    position: absolute;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+#myImg{
+    position:absolute;
+    top:0%;
+    margin:20px;
+    width:30px;
+   
+}

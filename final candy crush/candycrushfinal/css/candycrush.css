@@ -1,0 +1,316 @@
+    html,
+    body {
+        background: url("../images/candycrushbg.png") no-repeat center center fixed;
+        background-size: cover;
+        position: absolute;
+        overflow-x: hidden;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .grid {
+        height: 560px;
+        min-width: 560px;
+        max-width: 560px;
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgba(109, 127, 151, 0.5);
+        padding: 5px;
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5) inset, 0 1px 0 #fff;
+        color: #85796b;
+        cursor: pointer;
+    }
+    
+    .parent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .grid div {
+        height: 70px;
+        width: 70px;
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+    }
+    /* @keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+} */
+    .grid h1{
+        font-size:x-large;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+   
+        border-radius: 10px;
+        color: #f2f2f2;
+        text-align: center;
+  
+        text-decoration: none;
+        font-size: 17px;
+        box-sizing: border-box;
+    }
+    
+    .bar {
+      
+        display: flex;
+        flex-direction: row;
+        margin-left:150px;
+        
+
+      
+       
+    }
+    
+    .score-board,
+    .target-board,
+    .time-board,
+    .moves {
+        background-color: #ffc0cb;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        background-image: linear-gradient(#FFB6C1, #FFC0CB);
+        box-shadow: 0 2px 4px rgb(0 0 0 / 50%) inset, 0 1px 0 rgb(228, 122, 205);
+        color: black;
+        font-family: 'Pacifico', cursive;
+        min-width: 120px;
+        height:100px;
+        text-align: center;
+        font-size: 10px;
+    }
+    
+    #moves,
+    #time-left,
+    h3,
+    h1 {
+        font-style: oblique 90deg;
+        font-size: 15px;
+    }
+    
+    .candy {
+        position: relative;
+        margin: 2px;
+        padding: 0 6px 8px;
+        font-family: 'Pacifico', cursive;
+        box-sizing: border-box;
+        min-width: 150px;
+        height: 30px;
+        font-weight: bold;
+        font-size: 15px;
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        border-style: solid;
+        border-width: 3px 3px 4px;
+        text-shadow: 3px 2px 0 rgba(0, 0, 0, .3);
+        border-radius: 40px;
+        box-shadow: 0 6px 3px -3px rgba(0, 0, 0, .75);
+        transition: all 25s cubic-bezier(1, -0.4, 0, 1.4);
+        animation: bounce 4s ease-out 0s infinite normal both;
+    }
+    
+    @keyframes bounce {
+        2%,
+        6% {
+            transform: rotate(-5deg);
+        }
+        4%,
+        8% {
+            transform: rotate(5deg);
+        }
+        0%,
+        10% {
+            transform: inherit;
+        }
+    }
+    
+    ;
+    @keyframes bounce {
+        2%,
+        6% {
+            transform: rotate(-5deg) scale(.8);
+        }
+        4%,
+        8% {
+            transform: rotate(5deg) scale(.8);
+        }
+        0%,
+        10% {
+            transform: scale(.8);
+        }
+    }
+    
+    #start-button {
+        border-color: rgb(81, 255, 0);
+        background-color: #11f509e7;
+    }
+    
+    #new-game {
+        border-color: #FE4495;
+        background-color: #d5095f;
+        margin-top: 10px;
+    }
+    
+    #back-button {
+        border-color: #3BA7F7;
+        background-color: #0172FD;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .candy:hover,
+    .candy:focus {
+        transform: scale(.8);
+        filter: brightness(66%);
+        animation: bouncemin 4s ease-out 0s infinite normal both;
+    }
+    
+    .candy:before,
+    .candy:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+    .candy:before {
+        height: 40%;
+        width: 100%;
+        border-radius: 0 0 25% 25%;
+        
+    }
+    
+     :after {
+        width: 9px;
+        height: 18px;
+        margin: 4px 0 0 16px;
+        
+        border-radius: 50%;
+        transform: rotate(50deg);
+    }
+    
+    .button {
+        margin-left: 60px;
+        padding-left: 40px;
+    }
+    .level{
+        margin:10px;
+        color:#d5095f;
+        font-size: 25px;
+   
+      
+    }
+    #next-level{
+        background-color: rgb(194, 107, 252);
+        border-color: violet;
+    }
+  .winner,.loser{
+        background:rgba(0,0,0,.4);
+        cursor:pointer;
+        display:none;
+        height:100%;
+        position:fixed;
+        text-align:center;
+        top:0;
+        width:100%;
+        z-index:10000;
+     
+    }
+    .winner .helper,.loser .helper{
+        display:inline-block;
+        height:100%;
+        vertical-align:middle;
+    }
+    .winner > div,.loser >div {
+        background-color:pink;
+        box-shadow: 10px 10px 60px rgb(232, 143, 240);
+        display: inline-block;
+    
+        max-width: 551px;
+        min-height: 100px;
+        vertical-align: middle;
+        width: 40%;
+        height:30% ;
+        position: relative;
+        border-radius: 8px;
+        padding: 15px 5%;
+        border:solid 10px #FE4495;
+    }
+    .popupCloseButton {
+        background-color: #fff;
+        border: 3px solid #999;
+        border-radius: 50px;
+        cursor: pointer;
+        display: inline-block;
+        font-family: arial;
+        font-weight: bold;
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        font-size: 25px;
+        line-height: 30px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+    }
+    .popupCloseButton:hover {
+        background-color: rgb(19, 18, 18);
+    }
+    .winner p ,.loser p{
+        font-family: Bradley Hand, cursive;
+        font-weight: 500;
+        font-variant: small-caps;
+    }
+    .winner img, .loser img{
+        width: 30%;
+        height: 50%;
+    }
+    
+      #myImg{
+          position:absolute;
+          top:0%;
+          margin:20px;
+          width:30px;
+         
+      }

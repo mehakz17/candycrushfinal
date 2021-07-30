@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Candycrush game</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/mainmenu.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="buttons">
+            <button id="button1" class="candy" onclick="window.location.href='./html/level1.html'">Play!</button>
+            <button id="button2" class="candy" onclick=""> How To Play </button>
+        </div>
+        <!--Creates the popup body-->
+        <div class="popup-overlay">
+            <!--Creates the popup content-->
+
+            <div class="popup-content">
+                <h2 class="h2">Instructions:</h2>
+                <p class="text"> Touch a candy and swipe it with your finger.Match 3 or more candies of the same color
+                    to clear them and gain points to meet the target.</p>
+
+                <p class="text">Like this:</p>
+                <div>
+                    <img src="./images/new.jfif" alt="new">
+                </div>
+
+                <!--popup's close button-->
+                <button class="close" id="button3" onclick="">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioFile" controls loop hidden>
+        <source src="./sound/CandyCrushLoop5.mp3" type="audio/mpeg">
+    </audio>
+
+    <a class='musicOff' href="#!"><img src="./images/volume-off.svg" id="myImg" alt="speaker"></a>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./javascript/index.js"></script>
+
+
+
+</body>
+
+</html>

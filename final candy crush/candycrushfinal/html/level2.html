@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Candy crush level2</title>
+    <link href="../css/candycrush.css" rel="stylesheet">
+    <link href="../css/level2.css" rel="stylesheet">
+</head>
+
+<body>
+    `
+
+
+
+
+
+
+    <!--Main Menu-->
+    <div class="container">
+        <div class="bar">
+            <h1 class="level">level 2</h1>
+            <div class="target-board">
+                <h3>Target:</h3>
+                <h1 id="target"><span>65</span></h1>
+            </div>
+
+            <div class="score-board">
+                <h3>Score:</h3>
+                <h1 id="score"><span>0</span></h1>
+            </div>
+
+            <div class="time-board">
+                <h3>Timer:</h3>
+                <h1 id="time-left"><span>40</span></h1>
+            </div>
+
+            <div class="moves">
+                <h3>No Of Moves:</h3>
+                <H1 ID="noOfMoves"><span>15</span></H1>
+            </div>
+        </div>
+
+        <div class="button">
+
+
+            <div>
+                <button id="new-game" class="candy">NEW GAME</button>
+            </div>
+
+            <div>
+                <button id="back-button" class="candy" onclick="window.location.href='../index.html'">BACK</button>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="winner">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton">&times;</div>
+            <p>congratulation!! you've won<br />click on the "next level button" to proceed.</p>
+            <img src="../images/winner.png" alt="winner">
+        </div>
+    </div>
+    <div class="loser">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton">&times;</div>
+            <p>opps times up!! try again<br />click on the "new game" button to try again.</p>
+            <img src="../images/gameover.jpg" alt="loser">
+        </div>
+    </div>
+
+
+
+
+    <div class="parent">
+        <div class="grid">
+            <h1 class="clickOnStart">click on the "new game" button to begin the game</h1>
+
+        </div>
+    </div>
+    <audio id="audioFile" controls loop hidden>
+        <source src="../sound/CandyCrushLoop5.mp3" type="audio/mpeg">
+    </audio>
+
+    <a class='musicOff' href="#!"><img src="../images/volume-off.svg" alt="speaker" id="myImg"></a>
+
+    <Script src="https://code.jquery.com/jquery-3.6.0.min.js"></Script>
+
+    <script src="../javascript/level2.js"></script>
+</body>
+
+</html>
